@@ -1,0 +1,46 @@
+# Protocol v1 settings (Prompt 07). DRAFT until the freeze checklist is complete.
+protocol_version: v1-draft
+
+data:
+  pubmedqa_repo: https://github.com/pubmedqa/pubmedqa
+  pubmedqa_commit: 1cbae8e92f72f20c8d3747cbb3bf5bc53554d997
+  ori_pqal_sha256: 8b3276be8942ebbd77f3ddcda12c1749bf0e490045a736fd8438ee40cf37a41d
+  split: official split_dataset.py pqal (random.seed(0)), 500 test / 500 CV
+  main_set_size: 100          # stratified by final_decision, drawn from the test pool
+  main_set_seed: 2026
+  rq3_subset_size: 20
+  rq3_subset_seed: 13
+  pilot_size: 20              # development pool only
+  pilot_seed: 2026            # added in Prompt 09 (v1 named no pilot seed); same value as main_set_seed
+  gsm8k_commit: 3101c7d5072418e28b9008a6636bde82a006892c
+  gsm8k_test_sha256: 3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14
+  gsm8k_subset_size: 100
+  gsm8k_subset_seed: 2026
+
+model:
+  id: Qwen/Qwen2.5-7B-Instruct
+  revision: a09a35458c702b33eeacc393d103063234e8bc28
+  quantisation: {load_in_4bit: true, bnb_4bit_quant_type: nf4, bnb_4bit_compute_dtype: float16}
+  dtype: bfloat16            # non-quantised layers (embeddings, norms, lm_head); measured in Prompt 10, now pinned
+  batch_size: 1
+
+decoding:
+  greedy: {do_sample: false, repetition_penalty: 1.0, max_new_tokens: 128}
+  sampled: {do_sample: true, temperature: 0.7, top_p: 1.0, top_k: 0, repetition_penalty: 1.0,
+            max_new_tokens: 128, samples_per_prompt: 5}
+  gsm8k: {max_new_tokens: 384, greedy_runs: 1, sampled_runs: 10}
+
+seeds:
+  generation: "1000 * item_index + 10 * prompt_index + sample_index"
+  bootstrap: 7
+  permutation: 11
+
+analysis:
+  bootstrap_resamples: 2000
+  permutations_per_item: 1000
+  primary_metric: S_prompt
+  ties: canonical_greedy_label
+
+budget:
+  hard_cap_gpu_hours: 20
+  reduce_if_projected_over_gpu_hours: 15

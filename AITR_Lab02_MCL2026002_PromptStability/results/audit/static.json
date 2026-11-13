@@ -1,0 +1,97 @@
+{
+  "record_checks": {
+    "one record per dev item": {
+      "pass": true,
+      "detail": "500 records, 500 distinct items, 500 expected"
+    },
+    "no test-pool item": {
+      "pass": true,
+      "detail": "0 test items found"
+    },
+    "prompt P0, sample 0": {
+      "pass": true,
+      "detail": ""
+    },
+    "decoding = protocol greedy": {
+      "pass": true,
+      "detail": "{'do_sample': False, 'repetition_penalty': 1.0, 'max_new_tokens': 128}"
+    },
+    "model id and revision": {
+      "pass": true,
+      "detail": "Qwen/Qwen2.5-7B-Instruct @ a09a3545"
+    },
+    "item index and seed formula": {
+      "pass": true,
+      "detail": "0 mismatches []"
+    },
+    "stored decision = re-parse of raw text": {
+      "pass": true,
+      "detail": "0 mismatches []"
+    },
+    "no output cut at max_new_tokens": {
+      "pass": true,
+      "detail": "0 hit 128"
+    }
+  },
+  "sklearn": {
+    "accuracy": 0.588,
+    "macro_f1": 0.5528546345701383
+  },
+  "prompt_token_counts_match": "20/20",
+  "certainty_by_decision": {
+    "maybe": {
+      "moderate": 197,
+      "low": 5
+    },
+    "no": {
+      "moderate": 31,
+      "high": 76
+    },
+    "yes": {
+      "high": 95,
+      "moderate": 96
+    }
+  },
+  "maybe_examples": [
+    {
+      "key": "10411439",
+      "gold": "yes",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"The evidence suggests that the Trendelenburg position during pelvic dissection can significantly reduce lower limb perfusion, but it does not definitively prove that the Lloyd-Davies position with Trendelenburg is a disaster waiting to happen.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10430303",
+      "gold": "yes",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"There is evidence of some changes in liver function tests post-laparoscopic cholecystectomy, but the changes are not consistent with direct peri-sinusoidal cell damage.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10473855",
+      "gold": "no",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"The evidence suggests a possible relationship between delayed gastric emptying and pylorus preservation, but the study is not randomized and has a small sample size, which limits certainty.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10575390",
+      "gold": "no",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"Follow-up recommendations for abnormal Pap smears may influence patient adherence, but the evidence is mixed and influenced by other factors such as insurance status and clinic location.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10759659",
+      "gold": "yes",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"The nurse cystoscopist showed very close agreement with the consultant urologist in detecting bladder tumours, but the feasibility also depends on other factors not addressed in this evidence.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10811329",
+      "gold": "yes",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"99mTc leukocyte scintigraphy and SBFT studies appear to be useful in some cases for ruling out inflammation in children suspected of having IBD, but their utility is limited by false negatives and equivocal results.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "10927144",
+      "gold": "no",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"There is no significant evidence to suggest that p53 alterations can be used to predict tumor response to pre-operative chemo-radiation in locally advanced rectal cancer based on this study.\", \"certainty\": \"moderate\"}"
+    },
+    {
+      "key": "11149643",
+      "gold": "yes",
+      "raw_text": "{\"decision\": \"maybe\", \"conclusion\": \"The procedure has a moderate primary patency and limb salvage rate, suggesting it may be an acceptable alternative, but more data are needed for a definitive conclusion.\", \"certainty\": \"moderate\"}"
+    }
+  ]
+}

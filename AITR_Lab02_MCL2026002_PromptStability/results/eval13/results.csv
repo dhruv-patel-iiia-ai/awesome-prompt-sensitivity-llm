@@ -1,0 +1,29 @@
+item_set,method,role,metric,value,ci_low,ci_high,n,direction,comparator,only_comparator_right,only_method_right,p_exact_mcnemar,p_holm,test_note,source_file,source_sha256,prompt_id
+dev500,P0 (4-bit),model,accuracy,0.588000,0.544000,0.628000,500,higher,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+dev500,P0 (4-bit),model,macro_f1,0.552855,0.513076,0.590146,500,higher,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+dev500,P0 (4-bit),model,invalid_rate,0.000000,,,500,lower,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+dev500,P0 (4-bit),model,maybe_predicted,202,,,500,closer to gold count,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+dev500,always yes,control,accuracy,0.552000,0.508000,0.594000,500,higher,,,,,,,gold labels only,,
+dev500,always yes,control,macro_f1,0.237113,0.224580,0.248432,500,higher,,,,,,,gold labels only,,
+diag100,P0 (4-bit),model,accuracy,0.560000,0.470000,0.660000,100,higher,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+diag100,P0 (4-bit),model,macro_f1,0.529497,0.446970,0.615713,100,higher,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+diag100,P0 (4-bit),model,invalid_rate,0.000000,,,100,lower,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+diag100,P0 (4-bit),model,maybe_predicted,41,,,100,closer to gold count,,,,,,,results/generations/dev_b0.jsonl,f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a,P0
+diag100,P0 (8-bit),model,accuracy,0.570000,0.470000,0.670000,100,higher,,,,,,,results/audit/quant8.jsonl,1aa67542355fe2c3f9b2e739f2024552bdb666a843bd258fba1d17f70fe3875b,P0_8bit
+diag100,P0 (8-bit),model,macro_f1,0.540526,0.451140,0.621481,100,higher,,,,,,,results/audit/quant8.jsonl,1aa67542355fe2c3f9b2e739f2024552bdb666a843bd258fba1d17f70fe3875b,P0_8bit
+diag100,P0 (8-bit),model,invalid_rate,0.000000,,,100,lower,,,,,,,results/audit/quant8.jsonl,1aa67542355fe2c3f9b2e739f2024552bdb666a843bd258fba1d17f70fe3875b,P0_8bit
+diag100,P0 (8-bit),model,maybe_predicted,43,,,100,closer to gold count,,,,,,,results/audit/quant8.jsonl,1aa67542355fe2c3f9b2e739f2024552bdb666a843bd258fba1d17f70fe3875b,P0_8bit
+diag100,D1 one word,model,accuracy,0.330000,0.240000,0.420000,100,higher,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D1_one_word
+diag100,D1 one word,model,macro_f1,0.313924,0.223920,0.401793,100,higher,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D1_one_word
+diag100,D1 one word,model,invalid_rate,0.000000,,,100,lower,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D1_one_word
+diag100,D1 one word,model,maybe_predicted,74,,,100,closer to gold count,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D1_one_word
+diag100,D2 conclusion first,model,accuracy,0.720000,0.630000,0.810000,100,higher,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D2_conclusion_first
+diag100,D2 conclusion first,model,macro_f1,0.649285,0.550320,0.744580,100,higher,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D2_conclusion_first
+diag100,D2 conclusion first,model,invalid_rate,0.000000,,,100,lower,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D2_conclusion_first
+diag100,D2 conclusion first,model,maybe_predicted,23,,,100,closer to gold count,,,,,,,results/audit/format.jsonl,67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2,D2_conclusion_first
+diag100,always yes,control,accuracy,0.550000,0.460000,0.650000,100,higher,,,,,,,gold labels only,,
+diag100,always yes,control,macro_f1,0.236559,0.210046,0.262626,100,higher,,,,,,,gold labels only,,
+dev500,P0 (4-bit),paired test,accuracy_difference,0.036000,-0.022000,0.096000,500,method minus comparator,always yes,111,129,0.272457,,"single test; exact two-sided McNemar on paired correctness; items assumed independent; paired bootstrap CI (2000, seed 7)",results/generations/dev_b0.jsonl,,
+diag100,P0 (8-bit),paired test,accuracy_difference,0.010000,-0.050000,0.070000,100,method minus comparator,P0 (4-bit),4,5,1.000000,1.000000,"Holm over 3 tests; exact two-sided McNemar on paired correctness; items assumed independent; paired bootstrap CI (2000, seed 7)",results/audit/quant8.jsonl,,
+diag100,D1 one word,paired test,accuracy_difference,-0.230000,-0.330000,-0.130000,100,method minus comparator,P0 (4-bit),27,4,0.000034,0.000102,"Holm over 3 tests; exact two-sided McNemar on paired correctness; items assumed independent; paired bootstrap CI (2000, seed 7)",results/audit/format.jsonl,,
+diag100,D2 conclusion first,paired test,accuracy_difference,0.160000,0.070000,0.250000,100,method minus comparator,P0 (4-bit),4,20,0.001544,0.003088,"Holm over 3 tests; exact two-sided McNemar on paired correctness; items assumed independent; paired bootstrap CI (2000, seed 7)",results/audit/format.jsonl,,

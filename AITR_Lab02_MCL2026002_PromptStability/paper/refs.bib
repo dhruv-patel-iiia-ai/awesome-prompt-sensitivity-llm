@@ -1,0 +1,196 @@
+% Verified bibliography for the Paper 2 manuscript (Prompt 15).
+% Source of each entry:
+%   [REVIEW]   reference list of the author's literature review (Final_Paper.pdf),
+%              whose records were checked in Lab 1 / Prompts 03-04.
+%   [WEB 2026-11-13] arXiv abstract page or Crossref record, read on 2026-11-13.
+% Only entries cited in main.tex are kept. Do not add an entry without a source.
+
+% ---------- dataset, model, quantisation ----------
+@inproceedings{jin2019pubmedqa,
+  author    = {Qiao Jin and Bhuwan Dhingra and Zhengping Liu and William W. Cohen and Xinghua Lu},
+  title     = {{PubMedQA}: A Dataset for Biomedical Research Question Answering},
+  booktitle = {Proceedings of EMNLP 2019},
+  year      = {2019},
+  note      = {arXiv:1909.06146},
+}
+% [WEB 2026-11-13] arXiv 1909.06146; comments field "EMNLP 2019". Page numbers: not checked.
+
+@misc{qwen2025qwen25,
+  author        = {An Yang and Baosong Yang and Beichen Zhang and Binyuan Hui and Bo Zheng and Bowen Yu and others},
+  title         = {{Qwen2.5} Technical Report},
+  year          = {2024},
+  eprint        = {2412.15115},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+}
+% [WEB 2026-11-13] arXiv 2412.15115 (v1 19 Dec 2024, v2 3 Jan 2025); 42 authors, "Qwen" team.
+
+@misc{dettmers2023qlora,
+  author        = {Tim Dettmers and Artidoro Pagnoni and Ari Holtzman and Luke Zettlemoyer},
+  title         = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
+  year          = {2023},
+  eprint        = {2305.14314},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+}
+% [WEB 2026-11-13] arXiv 2305.14314. Cited only as the source of the NF4 data type.
+
+@article{mcnemar1947note,
+  author  = {Quinn McNemar},
+  title   = {Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages},
+  journal = {Psychometrika},
+  volume  = {12},
+  number  = {2},
+  pages   = {153--157},
+  year    = {1947},
+  doi     = {10.1007/BF02295996},
+}
+% [WEB 2026-11-13] Crossref record 10.1007/BF02295996.
+
+% ---------- closest prior work ----------
+@misc{hariprasad2026prompt,
+  author        = {Shravani Hariprasad},
+  title         = {Prompt Sensitivity and Answer Consistency of Small Open-Source Language Models for Clinical Question Answering in Low-Resource Healthcare},
+  year          = {2026},
+  eprint        = {2603.00917},
+  archivePrefix = {arXiv},
+}
+% [WEB 2026-11-13] arXiv 2603.00917 (v3, 16 Mar 2026).
+
+@misc{haase2026within,
+  author        = {Jennifer Haase and Jana Gonnermann-M{\"u}ller and Paul H. P. Hanel and Nicolas Leins and Thomas Kosch and Jan Mendling and Sebastian Pokutta},
+  title         = {Within-Model vs Between-Prompt Variability in Large Language Models for Creative Tasks},
+  year          = {2026},
+  eprint        = {2601.21339},
+  archivePrefix = {arXiv},
+}
+% [WEB 2026-11-13] arXiv 2601.21339.
+
+@misc{thapa2025disentangling,
+  author        = {Rahul Thapa and Qingyang Wu and Kevin Wu and Harrison Zhang and Angela Zhang and Eric Wu and Haotian Ye and Suhana Bedi and Nevin Aresh and Joseph Boen and Shriya Reddy and Ben Athiwaratkun and Shuaiwen Leon Song and James Zou},
+  title         = {Disentangling Reasoning and Knowledge in Medical Large Language Models},
+  year          = {2025},
+  eprint        = {2505.11462},
+  archivePrefix = {arXiv},
+}
+% [WEB 2026-11-13] arXiv 2505.11462 (v2, 24 Jun 2025). First author is Thapa
+% (earlier project logs wrongly said "Wu et al."; corrected 2026-11-13).
+
+% ---------- from the review's reference list ----------
+@inproceedings{chatterjee2024posix,
+  author    = {A. Chatterjee and H. S. V. N. K. Renduchintala and S. Bhatia and T. Chakraborty},
+  title     = {{POSIX}: A Prompt Sensitivity Index For Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {14550--14565},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-emnlp.852},
+}
+% [REVIEW] [3]. Authors exactly as initials in the review.
+
+@misc{cui2026same,
+  author        = {J. Cui and R. Alexander},
+  title         = {Same Prompt, Different Outcomes: Evaluating the Reproducibility of Data Analysis by {LLMs}},
+  year          = {2026},
+  eprint        = {2602.14349},
+  archivePrefix = {arXiv},
+}
+% [REVIEW] [5].
+
+@inproceedings{errica2025what,
+  author    = {F. Errica and D. Sanvito and G. Siracusano and R. Bifulco},
+  title     = {What Did {I} Do Wrong? Quantifying {LLMs}' Sensitivity and Consistency to Prompt Engineering},
+  booktitle = {Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {1543--1558},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.naacl-long.73},
+}
+% [REVIEW] [6].
+
+@inproceedings{hua2025flaw,
+  author    = {A. Hua and K. Tang and C. Gu and J. Gu and E. Wong and Y. Qin},
+  title     = {Flaw or Artifact? Rethinking Prompt Sensitivity in Evaluating {LLMs}},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {19889--19899},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.emnlp-main.1006},
+}
+% [REVIEW] [8].
+
+@inproceedings{liu2026understanding,
+  author    = {Y. Liu and C. Chu},
+  title     = {Understanding the Prompt Sensitivity},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)},
+  pages     = {44362--44388},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.acl-long.2053},
+}
+% [REVIEW] [11].
+
+@inproceedings{lu2022fantastically,
+  author    = {Y. Lu and M. Bartolo and A. Moore and S. Riedel and P. Stenetorp},
+  title     = {Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics},
+  pages     = {8086--8098},
+  year      = {2022},
+  doi       = {10.18653/v1/2022.acl-long.556},
+}
+% [REVIEW] [12].
+
+@article{mizrahi2024state,
+  author  = {M. Mizrahi and G. Kaplan and D. Malkin and R. Dror and D. Shahaf and G. Stanovsky},
+  title   = {State of What Art? {A} Call for Multi-Prompt {LLM} Evaluation},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {12},
+  pages   = {933--949},
+  year    = {2024},
+  doi     = {10.1162/tacl_a_00681},
+}
+% [REVIEW] [13].
+
+@misc{pecher2026revisiting,
+  author        = {B. Pecher and M. Spiegel and R. Belanec and J. Cegin},
+  title         = {Revisiting Prompt Sensitivity in Large Language Models for Text Classification: The Role of Prompt Underspecification},
+  year          = {2026},
+  eprint        = {2602.04297},
+  archivePrefix = {arXiv},
+}
+% [REVIEW] [16].
+
+@inproceedings{wang2023selfconsistency,
+  author    = {X. Wang and J. Wei and D. Schuurmans and Q. V. Le and E. H. Chi and S. Narang and A. Chowdhery and D. Zhou},
+  title     = {Self-Consistency Improves Chain of Thought Reasoning in Language Models},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  note      = {arXiv:2203.11171},
+}
+% [REVIEW] [17].
+
+@inproceedings{wei2022chain,
+  author    = {J. Wei and X. Wang and D. Schuurmans and M. Bosma and B. Ichter and F. Xia and E. Chi and Q. V. Le and D. Zhou},
+  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022},
+  note      = {arXiv:2201.11903},
+}
+% [REVIEW] [18].
+
+@inproceedings{zhao2021calibrate,
+  author    = {Z. Zhao and E. Wallace and S. Feng and D. Klein and S. Singh},
+  title     = {Calibrate Before Use: Improving Few-Shot Performance of Language Models},
+  booktitle = {Proceedings of the 38th International Conference on Machine Learning (ICML)},
+  series    = {PMLR},
+  volume    = {139},
+  pages     = {12697--12706},
+  year      = {2021},
+}
+% [REVIEW] [20].
+
+@inproceedings{zhuo2024prosa,
+  author    = {J. Zhuo and S. Zhang and X. Fang and H. Duan and D. Lin and K. Chen},
+  title     = {{ProSA}: Assessing and Understanding the Prompt Sensitivity of {LLMs}},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {1950--1976},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-emnlp.108},
+}
+% [REVIEW] [22].

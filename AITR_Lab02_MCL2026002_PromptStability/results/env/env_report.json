@@ -1,0 +1,191 @@
+{
+  "time": "2026-10-29T09:35:31",
+  "with_model": true,
+  "summary": {
+    "PASS": 36,
+    "WARN": 0,
+    "FAIL": 0
+  },
+  "checks": [
+    {
+      "status": "PASS",
+      "check": "python",
+      "detail": "3.13.16"
+    },
+    {
+      "status": "PASS",
+      "check": "platform",
+      "detail": "Linux-6.6.159+-x86_64-with-glibc2.39 | CPUs 2"
+    },
+    {
+      "status": "PASS",
+      "check": "RAM",
+      "detail": "13.3 GB"
+    },
+    {
+      "status": "PASS",
+      "check": "disk free",
+      "detail": "75.0 GB (model needs about 15 GB)"
+    },
+    {
+      "status": "PASS",
+      "check": "import torch",
+      "detail": "2.11.0+cu130"
+    },
+    {
+      "status": "PASS",
+      "check": "import transformers",
+      "detail": "5.20.2"
+    },
+    {
+      "status": "PASS",
+      "check": "import accelerate",
+      "detail": "1.15.0"
+    },
+    {
+      "status": "PASS",
+      "check": "import bitsandbytes",
+      "detail": "0.50.2"
+    },
+    {
+      "status": "PASS",
+      "check": "import numpy",
+      "detail": "2.1.3"
+    },
+    {
+      "status": "PASS",
+      "check": "import pandas",
+      "detail": "2.2.3"
+    },
+    {
+      "status": "PASS",
+      "check": "import scipy",
+      "detail": "1.16.3"
+    },
+    {
+      "status": "PASS",
+      "check": "import sklearn",
+      "detail": "1.6.1"
+    },
+    {
+      "status": "PASS",
+      "check": "import yaml",
+      "detail": "6.0.3"
+    },
+    {
+      "status": "PASS",
+      "check": "transformers >= 4.37 (Qwen2 support)",
+      "detail": "5.20.2"
+    },
+    {
+      "status": "PASS",
+      "check": "nvidia-smi",
+      "detail": "Tesla T4, 580.82.07, 15360 MiB"
+    },
+    {
+      "status": "PASS",
+      "check": "torch.cuda",
+      "detail": "Tesla T4 | compute capability 7.5 | 15.6 GB | CUDA 13.0"
+    },
+    {
+      "status": "PASS",
+      "check": "GPU memory >= 14 GB",
+      "detail": "15.6 GB"
+    },
+    {
+      "status": "PASS",
+      "check": "bfloat16 supported",
+      "detail": "True"
+    },
+    {
+      "status": "PASS",
+      "check": "python random seed",
+      "detail": "reproducible"
+    },
+    {
+      "status": "PASS",
+      "check": "numpy seed",
+      "detail": "reproducible"
+    },
+    {
+      "status": "PASS",
+      "check": "torch seed (cuda)",
+      "detail": "reproducible"
+    },
+    {
+      "status": "PASS",
+      "check": "ori_pqal.json sha256",
+      "detail": "8b3276be8942ebbd..."
+    },
+    {
+      "status": "PASS",
+      "check": "PQA-L items and labels",
+      "detail": "1000 items, {'yes': 552, 'no': 338, 'maybe': 110}"
+    },
+    {
+      "status": "PASS",
+      "check": "PQA-L fields",
+      "detail": "['CONTEXTS', 'LABELS', 'LONG_ANSWER', 'MESHES', 'QUESTION', 'YEAR', 'final_decision', 'reasoning_free_pred', 'reasoning_required_pred']"
+    },
+    {
+      "status": "PASS",
+      "check": "long answer absent from contexts",
+      "detail": "0 items contain it"
+    },
+    {
+      "status": "PASS",
+      "check": "test_ground_truth.json sha256",
+      "detail": "939fe566f09017d1..."
+    },
+    {
+      "status": "PASS",
+      "check": "test split",
+      "detail": "500 items, {'yes': 276, 'no': 169, 'maybe': 55}"
+    },
+    {
+      "status": "PASS",
+      "check": "test split == test_ground_truth.json",
+      "detail": "True"
+    },
+    {
+      "status": "PASS",
+      "check": "CV dev folds",
+      "detail": "500 items, overlap with test = 0"
+    },
+    {
+      "status": "PASS",
+      "check": "GSM8K test.jsonl",
+      "detail": "1319 problems, sha256 match True"
+    },
+    {
+      "status": "PASS",
+      "check": "model load",
+      "detail": "Qwen/Qwen2.5-7B-Instruct@a09a3545 in 498 s, GPU allocated 5.9 GB"
+    },
+    {
+      "status": "PASS",
+      "check": "prompt built",
+      "detail": "dev PMID 10354335, 424 input tokens"
+    },
+    {
+      "status": "PASS",
+      "check": "greedy determinism",
+      "detail": "identical"
+    },
+    {
+      "status": "PASS",
+      "check": "greedy throughput",
+      "detail": "37 tokens in 4.3 s = 8.7 tokens/s"
+    },
+    {
+      "status": "PASS",
+      "check": "JSON output parses",
+      "detail": "yes"
+    },
+    {
+      "status": "PASS",
+      "check": "seeded sampling reproducible",
+      "detail": "identical"
+    }
+  ]
+}

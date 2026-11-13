@@ -1,0 +1,4 @@
+gold \ predicted,yes,no,maybe,invalid
+yes,165,5,106,0
+no,8,97,64,0
+maybe,18,5,32,0

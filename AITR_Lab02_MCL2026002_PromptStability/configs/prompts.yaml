@@ -1,0 +1,35 @@
+# Prompt templates. P0 is frozen text from protocol v1. P1-P5 and the judge prompt are written
+# on the development pool, checked by the student and one peer, then the file's SHA-256 is recorded.
+# {context} and {question} are filled by src/prompts.py; literal braces are doubled.
+system: "You are a careful biomedical research assistant. Answer only from the evidence provided."
+
+prompts:
+  P0: |-
+    Evidence (abstract without its conclusion):
+    {context}
+
+    Research question: {question}
+
+    Based only on this evidence, answer the research question. Reply with one JSON object:
+    {{"decision": "yes" | "no" | "maybe", "conclusion": "<one sentence>", "certainty": "high" | "moderate" | "low"}}
+  # P1: TODO (development pool only)
+  # P2: TODO
+  # P3: TODO
+  # P4: TODO
+  # P5: TODO
+
+# Question-only control (protocol v1 §1): P0 with the evidence block removed. Added in Prompt 09 cycle 2.
+question_only: |-
+  Research question: {question}
+
+  Answer the research question. Reply with one JSON object:
+  {{"decision": "yes" | "no" | "maybe", "conclusion": "<one sentence>", "certainty": "high" | "moderate" | "low"}}
+
+# GSM8K self-consistency code check (protocol v1 §5). Added in Prompt 09 cycle 2.
+gsm8k_system: "You are a careful math tutor."
+gsm8k_cot: |-
+  {question}
+
+  Solve the problem step by step. End your reply with the sentence "The answer is <number>."
+
+judge: TODO

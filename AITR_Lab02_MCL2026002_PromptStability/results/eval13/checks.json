@@ -1,0 +1,74 @@
+{
+  "checks": [
+    "metric direction: perfect = 1, all wrong = 0; accuracy: higher, macro_f1: higher, invalid_rate: lower, maybe_predicted: closer to gold count",
+    "gold dev500: 500 gold labels, counts {'maybe': 55, 'yes': 276, 'no': 169}",
+    "diag100 is a subset of dev500",
+    "results/generations/dev_b0.jsonl: 500 records, no missing values, no duplicates",
+    "P0 (4-bit): 500 records = 500 expected items",
+    "P0 (4-bit): 500 items, all in the dev pool, 0 test-pool items",
+    "P0 (4-bit): stored decision = re-parse of raw text",
+    "P0 (4-bit): prompts rebuilt for 500 items, authors' conclusion absent from every prompt",
+    "P0 (4-bit): labels {'yes': 191, 'maybe': 202, 'no': 107}",
+    "results/audit/quant8.jsonl: 100 records, no missing values, no duplicates",
+    "P0 (8-bit): 100 records = 100 expected items",
+    "P0 (8-bit): 100 items, all in the dev pool, 0 test-pool items",
+    "P0 (8-bit): stored decision = re-parse of raw text",
+    "P0 (8-bit): prompts rebuilt for 100 items, authors' conclusion absent from every prompt",
+    "P0 (8-bit): labels {'yes': 37, 'maybe': 43, 'no': 20}",
+    "results/audit/format.jsonl: 200 records, no missing values, no duplicates",
+    "D1 one word: 100 records = 100 expected items",
+    "D1 one word: 100 items, all in the dev pool, 0 test-pool items",
+    "D1 one word: prompts rebuilt for 100 items, authors' conclusion absent from every prompt",
+    "D1 one word: labels {'yes': 22, 'maybe': 74, 'no': 4}",
+    "D2 conclusion first: 100 records = 100 expected items",
+    "D2 conclusion first: 100 items, all in the dev pool, 0 test-pool items",
+    "D2 conclusion first: stored decision = re-parse of raw text",
+    "D2 conclusion first: prompts rebuilt for 100 items, authors' conclusion absent from every prompt",
+    "D2 conclusion first: labels {'yes': 49, 'maybe': 23, 'no': 28}",
+    "settings audit: every difference from P0 (4-bit) is declared"
+  ],
+  "settings_audit": {
+    "P0 (4-bit)": {
+      "model_id": "same",
+      "model_revision": "same",
+      "decoding": "same",
+      "quantisation": "same",
+      "sample_idx": "same",
+      "seed": "same",
+      "prompt_text": "same template"
+    },
+    "P0 (8-bit)": {
+      "model_id": "same",
+      "model_revision": "same",
+      "decoding": "same",
+      "quantisation": "INTENDED: 8-bit instead of 4-bit",
+      "sample_idx": "same",
+      "seed": "DIFFERS on 100 items, no effect (greedy): audit seeds count items within the 100-item list; greedy output is seed-independent (Prompt 10, V7)",
+      "prompt_text": "same template"
+    },
+    "D1 one word": {
+      "model_id": "same",
+      "model_revision": "same",
+      "decoding": "same",
+      "quantisation": "same",
+      "sample_idx": "same",
+      "seed": "DIFFERS on 100 items, no effect (greedy): audit seeds count items within the 100-item list; greedy output is seed-independent (Prompt 10, V7)",
+      "prompt_text": "INTENDED: one-word answer, no JSON"
+    },
+    "D2 conclusion first": {
+      "model_id": "same",
+      "model_revision": "same",
+      "decoding": "same",
+      "quantisation": "same",
+      "sample_idx": "same",
+      "seed": "DIFFERS on 100 items, no effect (greedy): audit seeds count items within the 100-item list; greedy output is seed-independent (Prompt 10, V7)",
+      "prompt_text": "INTENDED: JSON fields reordered"
+    }
+  },
+  "inputs": {
+    "results/generations/dev_b0.jsonl": "f737c085b8dc18a08e68e2bab8b9524537b6db2751535a5589b674de1aa9aa8a",
+    "results/audit/quant8.jsonl": "1aa67542355fe2c3f9b2e739f2024552bdb666a843bd258fba1d17f70fe3875b",
+    "results/audit/format.jsonl": "67807abf6d6528130929561dcdd6f6235cd135b7f44b65b9e1947fdca03c24a2"
+  },
+  "prompt10_reproduced": true
+}

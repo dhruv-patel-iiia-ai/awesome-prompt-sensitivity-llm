@@ -1,0 +1,77 @@
+{
+  "n": 500,
+  "accuracy": 0.588,
+  "accuracy_ci95": [
+    0.544,
+    0.628
+  ],
+  "macro_f1": 0.5528546345701383,
+  "macro_f1_official": 0.5528546345701383,
+  "invalid_rate": 0.0,
+  "per_class": {
+    "yes": {
+      "precision": 0.8638743455497382,
+      "recall": 0.5978260869565217,
+      "f1": 0.7066381156316917,
+      "support": 276
+    },
+    "no": {
+      "precision": 0.9065420560747663,
+      "recall": 0.5739644970414202,
+      "f1": 0.7028985507246377,
+      "support": 169
+    },
+    "maybe": {
+      "precision": 0.15841584158415842,
+      "recall": 0.5818181818181818,
+      "f1": 0.2490272373540856,
+      "support": 55
+    }
+  },
+  "confusion": {
+    "yes": {
+      "yes": 165,
+      "no": 5,
+      "maybe": 106,
+      "invalid": 0
+    },
+    "no": {
+      "yes": 8,
+      "no": 97,
+      "maybe": 64,
+      "invalid": 0
+    },
+    "maybe": {
+      "yes": 18,
+      "no": 5,
+      "maybe": 32,
+      "invalid": 0
+    }
+  },
+  "gold_counts": {
+    "yes": 276,
+    "no": 169,
+    "maybe": 55
+  },
+  "pred_counts": {
+    "yes": 191,
+    "no": 107,
+    "maybe": 202,
+    "invalid": 0
+  },
+  "majority_label": "yes",
+  "majority_accuracy": 0.552,
+  "efficiency": {
+    "generations": 500,
+    "gpu_seconds": 1855.8,
+    "mean_latency_s": 3.7115500000000003,
+    "mean_out_tokens": 50.85,
+    "tokens_per_s": 13.70047554256308
+  },
+  "parse_status_counts": {
+    "json": 500,
+    "regex": 0,
+    "invalid": 0
+  },
+  "invalid_run_ids": []
+}

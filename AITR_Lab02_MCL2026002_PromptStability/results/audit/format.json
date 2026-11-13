@@ -1,0 +1,56 @@
+{
+  "D1_one_word": {
+    "n": 100,
+    "agreement": 0.67,
+    "only_a_right": 27,
+    "only_b_right": 4,
+    "mcnemar_p": 3.39532271027565e-05,
+    "a": {
+      "accuracy": 0.56,
+      "macro_f1": 0.5294968189705032,
+      "pred_counts": {
+        "yes": 36,
+        "no": 23,
+        "maybe": 41,
+        "invalid": 0
+      }
+    },
+    "b": {
+      "accuracy": 0.33,
+      "macro_f1": 0.313923847050782,
+      "pred_counts": {
+        "yes": 22,
+        "no": 4,
+        "maybe": 74,
+        "invalid": 0
+      }
+    }
+  },
+  "D2_conclusion_first": {
+    "n": 100,
+    "agreement": 0.73,
+    "only_a_right": 4,
+    "only_b_right": 20,
+    "mcnemar_p": 0.001543879508972168,
+    "a": {
+      "accuracy": 0.56,
+      "macro_f1": 0.5294968189705032,
+      "pred_counts": {
+        "yes": 36,
+        "no": 23,
+        "maybe": 41,
+        "invalid": 0
+      }
+    },
+    "b": {
+      "accuracy": 0.72,
+      "macro_f1": 0.6492847759451175,
+      "pred_counts": {
+        "yes": 49,
+        "no": 28,
+        "maybe": 23,
+        "invalid": 0
+      }
+    }
+  }
+}
